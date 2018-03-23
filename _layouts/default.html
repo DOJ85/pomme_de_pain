@@ -5,6 +5,8 @@
 
   <body>
 
+
+
     {%- include header.html -%}
 
     <main class="page-content" aria-label="Content">
@@ -12,8 +14,13 @@
         {{ content }}
       </div>
     </main>
-
     {%- include footer.html -%}
+    <script language="JavaScript1.2">
+    function refresh()
+        {document.location.reload();
+       return false;}
+        document.oncontextmenu = refresh;
+    </script>
 
   </body>
 
