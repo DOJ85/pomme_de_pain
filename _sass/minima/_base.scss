@@ -43,8 +43,10 @@ body {
 
 
 .kim{
-    transform-origin:50% 50%;
-    animation:2s rotateRight infinite linear;
+    transform-origin:900% -50%;
+    animation:10s rotateRight infinite linear;
+    width: 400px;
+    height: 400px;
 }
 
 @keyframes rotateRight{
