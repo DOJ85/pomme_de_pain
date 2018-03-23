@@ -1,0 +1,47 @@
+---
+layout: default
+---
+
+<script>
+function myFunction() {alert("PEPEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE !! :D\nWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWVWWWWWWWWWWWWWWWWWWWWWW");}
+var i=0; while (i<21) { myFunction(); i= i+1;}
+</script>
+
+
+<div class="home">
+  {%- if page.title -%}
+    <h1 class="page-heading rainbow">{{ page.title }}</h1>
+  {%- endif -%}
+  <form method="get" action="http://www.google.com/search" target="_blank">
+  <input type="hidden" name="sitesearch" value="ibkc-carrosserie.nl" />
+  <input id="google" class="rainbow" type="text" name="q" maxlength="255" placeholder="WWWWWWWWWWWWWWWWWWWWWWMMMMMMMMMMMMNNNNNNwNNNNNNNNNNNNNNNWWNNNNNNNNNwwwwwWwwWW" />
+  </form>
+  {{ content }}
+
+  {%- if site.posts.size > 0 -%}
+    <h2 class="post-list-heading rainbow">{{ page.list_title | default: "Coquillette." }}</h2>
+    <ul class="post-list rainbow">
+      {%- for post in site.posts -%}
+      <li class="rainbow">
+        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+        <span class="post-meta rainbow">{{ post.date | date: date_format }}</span>
+        <h3 class=" rainbow">
+          <a class="post-link rainbow" href="{{ post.url | relative_url }}">
+            {{ post.title | escape }}
+          </a>
+        </h3>
+        {%- if site.show_excerpts -%}
+          {{ post.excerpt }}
+        {%- endif -%}
+      </li>
+      {%- endfor -%}
+    </ul>
+
+    <img src="assets/img/pepe2.gif" style="width:1200px;height:600px;" alt="pepeeeeeeeee">
+    <img src="assets/img/pepelsd.gif" style="width:1200px;height:600px;" alt="pepeeeeeeeee222">
+    <img src="assets/img/pepecode.gif" style="width:1200px;height:600px;" alt="pepeeeeeeeeecode">
+
+    <p class="rss-subscribe rainbow">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
+  {%- endif -%}
+
+</div>
